@@ -1,0 +1,23 @@
+/* Styling untuk efek mengetik */
+.typing-text-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid black;
+  animation: 
+    typing 4.5s steps(12, end) forwards,
+    blink-caret .75s step-end infinite;
+  width: 0;
+}
+
+/* Animasi mengetik */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Animasi kursor berkedip */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}

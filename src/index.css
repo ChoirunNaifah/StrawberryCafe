@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Latar belakang default untuk mode terang */
+  @apply bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300;
+  /* Menambahkan transisi agar pergantian mode mulus */
+  @apply transition-colors duration-500;
+}
+
+/* ✨ Latar belakang baru untuk mode gelap dengan nuansa pink */
+.dark body {
+  @apply bg-gradient-to-br from-pink-950 to-purple-900;
+}
+
+/* 🍓 === ANIMASI LOGO STROBERI === 🍓
+  Tambahkan ini untuk animasi logo
+*/
+@keyframes gentle-bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.05);
+  }
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 2.5s ease-in-out infinite;
+}
